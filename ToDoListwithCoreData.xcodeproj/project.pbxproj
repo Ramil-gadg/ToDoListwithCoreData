@@ -51,6 +51,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		037DA3ED26E8B2E2005FD61D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				03D1633726E3EA1400C41860 /* TaskListTableViewController.swift */,
+				03D1634826E41B6A00C41860 /* TaskTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		037DA3EE26E8B316005FD61D /* DataStoreManager */ = {
+			isa = PBXGroup;
+			children = (
+				03D1633B26E3EA7F00C41860 /* DataStoreManager.swift */,
+			);
+			path = DataStoreManager;
+			sourceTree = "<group>";
+		};
+		037DA3EF26E8B337005FD61D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03D1632626E3E94F00C41860 /* Main.storyboard */,
+				03D1632E26E3E95400C41860 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		03D1631426E3E94F00C41860 = {
 			isa = PBXGroup;
 			children = (
@@ -71,14 +97,12 @@
 		03D1631F26E3E94F00C41860 /* ToDoListwithCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				037DA3EF26E8B337005FD61D /* View */,
+				037DA3EE26E8B316005FD61D /* DataStoreManager */,
+				037DA3ED26E8B2E2005FD61D /* ViewController */,
 				03D1632026E3E94F00C41860 /* AppDelegate.swift */,
-				03D1633B26E3EA7F00C41860 /* DataStoreManager.swift */,
 				03D1632226E3E94F00C41860 /* SceneDelegate.swift */,
-				03D1632626E3E94F00C41860 /* Main.storyboard */,
-				03D1633726E3EA1400C41860 /* TaskListTableViewController.swift */,
-				03D1634826E41B6A00C41860 /* TaskTableViewController.swift */,
 				03D1632C26E3E95400C41860 /* Assets.xcassets */,
-				03D1632E26E3E95400C41860 /* LaunchScreen.storyboard */,
 				03D1633126E3E95400C41860 /* Info.plist */,
 				03D1632926E3E94F00C41860 /* ToDoListwithCoreData.xcdatamodeld */,
 			);

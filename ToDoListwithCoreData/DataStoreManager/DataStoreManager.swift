@@ -65,7 +65,7 @@ class DataStore{
     func fetchTask (taskList: TaskList, completed: Bool?) -> [Tasks] {
         
         var tasks = [Tasks]()
-        NSCondition
+        
         let request: NSFetchRequest<Tasks> = Tasks.fetchRequest()
         let taskListName = taskList.name!
         if completed == nil {
@@ -74,7 +74,7 @@ class DataStore{
             request.predicate = NSPredicate(format: "taskList == %@ AND completed == %d", taskListName, completed!)
         }
         do {
-        
+            
             tasks = try context.fetch(request)
             
         } catch let error as NSError {
@@ -86,7 +86,7 @@ class DataStore{
             return [Tasks]()
         }
     }
-
+    
     
     
     func fetchAndChangeTask (task: Tasks, completed: Bool) {
@@ -103,9 +103,9 @@ class DataStore{
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "TaskList")
         request.predicate = NSPredicate(format: "name = %@", taskList.name!)
         do {
-           let taskLists = try context.fetch(request) as! [TaskList]
+            let taskLists = try context.fetch(request) as! [TaskList]
             for taskList in taskLists {
-            context.delete(taskList)
+                context.delete(taskList)
             }
             try context.save()
         } catch let error as NSError {
@@ -118,9 +118,9 @@ class DataStore{
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Tasks")
         request.predicate = NSPredicate(format: "taskList = %@ AND name = %@", taskList.name!, task.name!)
         do {
-           let tasks = try context.fetch(request) as! [Tasks]
+            let tasks = try context.fetch(request) as! [Tasks]
             for task in tasks {
-            context.delete(task)
+                context.delete(task)
             }
             try context.save()
         } catch let error as NSError {
